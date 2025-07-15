@@ -8,16 +8,14 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            string str = "Hello World";
-
-            char[] ch = str.ToCharArray();
-            str = "";
-            for (int i = ch.Length - 1; i >= 0; i--)
+            int a = 0;
+        repeat:
+            if (a < 100)
             {
-                str = str + ch[i];
+                a++;
+                Console.Write(a + " ");
+                goto repeat;
             }
-
-            Console.WriteLine($"Display string after reverse \n{str}");
         }
     }
 }
